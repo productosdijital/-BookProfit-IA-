@@ -1,0 +1,16 @@
+BOOKPROFIT IA™ — PÁGINA DE VENTAS FINAL
+
+ENLACE DE PAGO CONFIGURADO EN LOS BOTONES PRINCIPALES:
+https://pay.hotmart.com/P106684536S?bid=1784219837991
+
+CAMBIOS REALIZADOS
+- Todos los botones principales de inscripción abren Hotmart.
+- La sección de testimonios fue eliminada completamente.
+- Se mantuvieron los botones internos de navegación, como “Ver contenido”.
+- El diseño conserva sus animaciones, efectos 3D y adaptación para celular.
+- No se incluyeron testimonios inventados.
+
+ARCHIVOS
+- index.html: versión editable con carpeta de imágenes.
+- bookprofit_ia_landing_independiente.html: versión de un solo archivo.
+- assets/: imágenes optimizadas para web.
