@@ -1,65 +1,1475 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="BookProfit IA: crea y vende libros digitales con ChatGPT, Canva y Hotmart." name="description"/><meta content="#070019" name="theme-color"/><title>BookProfit IA™ | Crea y vende libros digitales</title><style>
-:root{--bg:#05000f;--p:#8b3dff;--p2:#c35cff;--b:#437dff;--c:#23e6ee;--y:#ffd62f;--w:#fbf9ff;--t:#d9d2e8;--m:#9e95b4;--card:#10072b;--line:rgba(255,255,255,.09);--max:1220px;--shadow:0 35px 100px rgba(0,0,0,.58)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;color:var(--w);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.62;overflow-x:hidden;background:radial-gradient(circle at 85% -5%,rgba(90,58,255,.26),transparent 30rem),radial-gradient(circle at -10% 35%,rgba(216,47,255,.14),transparent 29rem),linear-gradient(180deg,#04000c,#0a031d 48%,#030009)}
-body:before{content:"";position:fixed;inset:0;z-index:-2;opacity:.17;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(#000,transparent 88%)}
-img{max-width:100%;display:block}a{color:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}.section{padding:104px 0}.section-sm{padding:72px 0}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(3rem,7.4vw,7.2rem);line-height:.89;letter-spacing:-.072em;margin:20px 0 24px}h2{font-size:clamp(2.25rem,4.8vw,5rem);line-height:.98;letter-spacing:-.052em;margin-bottom:18px}h3{font-size:clamp(1.2rem,2vw,1.65rem);line-height:1.16;margin-bottom:10px}p{color:var(--t)}.lead{font-size:clamp(1.03rem,1.65vw,1.28rem);line-height:1.72;max-width:760px}.muted{color:var(--m)}.gradient{color:transparent;background:linear-gradient(104deg,#fff,#c9c4ff 28%,var(--p2) 58%,var(--c));-webkit-background-clip:text;background-clip:text}.cyan{color:var(--c)}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(35,230,238,.3);border-radius:999px;color:var(--c);background:rgba(35,230,238,.07);font-size:.76rem;font-weight:950;letter-spacing:.1em;text-transform:uppercase}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 16px var(--c)}
-.btn{min-height:58px;padding:0 24px;border-radius:15px;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;text-align:center;font-weight:950;border:1px solid transparent;transition:.23s ease;cursor:pointer}.btn:hover{transform:translateY(-3px)}.primary{color:#0b0713;background:linear-gradient(135deg,#fff4a1,var(--y) 40%,#ff9d1f);box-shadow:0 16px 45px rgba(255,177,31,.28)}.secondary{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14)}.sm{min-height:46px;padding:0 18px;border-radius:12px;font-size:.9rem}
-.offerbar{padding:10px 16px;text-align:center;color:#140b00;background:linear-gradient(90deg,#ff9d00,#ffe45e,#ff9d00);font-weight:1000;font-size:.82rem;letter-spacing:.035em}.nav{position:sticky;top:0;z-index:80;background:rgba(5,0,15,.74);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}.navin{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:950}.brandmark{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,var(--p2),var(--b));box-shadow:0 0 30px rgba(121,71,255,.3)}.brand small{display:block;color:var(--c);font-size:.62rem;letter-spacing:.14em}.links{display:flex;align-items:center;gap:25px}.links>a:not(.btn){text-decoration:none;color:#d7d0e6;font-size:.91rem;font-weight:780}.menu{display:none;width:44px;height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.07);color:#fff;font-size:1.3rem}
-.hero{min-height:calc(100vh - 116px);display:grid;align-items:center;padding:72px 0 70px;overflow:hidden;position:relative}.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:46px;align-items:center}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin:30px 0 18px}.trust{display:flex;flex-wrap:wrap;gap:20px;color:#b8afc8;font-size:.88rem}.trust span:before{content:"✓";color:var(--c);font-weight:1000;margin-right:7px}.mini{display:inline-flex;gap:14px;align-items:center;margin-top:24px;padding:12px 16px;border:1px solid rgba(255,214,47,.25);border-radius:16px;background:rgba(20,8,39,.75)}.mini strong{color:var(--y);font-size:1.7rem}.mini span{font-size:.82rem;color:#b8afc8}
-.heroart{position:relative;min-height:650px;perspective:1200px}.mentorframe{position:absolute;inset:2% 5% 3% 19%;overflow:hidden;border-radius:34px;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);transform:rotate(2.2deg);transition:.18s}.mentorframe img{width:100%;height:100%;object-fit:cover;object-position:center 20%}.mentorframe:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,0,15,.55),transparent 55%)}.boxfloat{position:absolute;z-index:5;left:-5%;bottom:-1%;width:62%;filter:drop-shadow(0 30px 46px rgba(0,0,0,.72));animation:float 5.4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-16px) rotate(-1deg)}}.chip{position:absolute;z-index:7;padding:11px 14px;border:1px solid rgba(35,230,238,.24);border-radius:14px;background:rgba(8,2,23,.9);font-size:.8rem;font-weight:900}.chip b{color:var(--c)}.c1{left:1%;top:9%}.c2{right:-2%;top:24%}.c3{right:0;bottom:12%}
-.ticker{overflow:hidden;border-block:1px solid rgba(255,255,255,.07)}.track{display:flex;width:max-content;padding:20px 0;animation:marquee 30s linear infinite;text-transform:uppercase;font-size:.78rem;font-weight:900;letter-spacing:.1em}.track span{margin:0 28px}.track i{color:var(--c);font-style:normal}@keyframes marquee{to{transform:translateX(-50%)}}
-.heading{max-width:860px;margin-bottom:48px}.center{text-align:center;margin-inline:auto}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel,.testimonialarea{padding:40px;border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.017)),rgba(15,8,36,.82);border:1px solid var(--line);box-shadow:var(--shadow)}.quote{font-size:clamp(1.75rem,3vw,2.7rem);line-height:1.12;font-weight:950;letter-spacing:-.04em}.steps,.checks{display:grid;gap:13px;margin-top:24px}.step,.check{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.075)}.step>b,.check i{flex:0 0 32px;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--c);color:#08010f;font-style:normal;font-weight:1000}
-.audience{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.aud,.learn{padding:25px;border-radius:20px;background:rgba(255,255,255,.033);border:1px solid rgba(255,255,255,.08);transition:.25s}.aud:hover,.learn:hover{transform:translateY(-7px);border-color:rgba(35,230,238,.32)}.audico,.ico{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;margin-bottom:20px;background:linear-gradient(145deg,var(--p2),var(--b));font-weight:1000}
-.modules{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.module{padding:26px 22px;border-radius:23px;background:linear-gradient(180deg,rgba(27,12,58,.96),rgba(8,3,20,.98));border:1px solid var(--line);transition:.25s}.module:hover{transform:translateY(-8px);border-color:rgba(132,81,255,.42)}.num{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;margin-bottom:22px;background:linear-gradient(145deg,var(--p2),var(--b));font-weight:1000}.module small{color:var(--c);font-weight:950;letter-spacing:.1em;text-transform:uppercase}.module p{color:var(--m)}
-.devicegrid,.resultgrid,.mentorgrid,.offergrid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.devices{position:relative;min-height:560px;display:grid;place-items:center}.laptop{width:112%;filter:drop-shadow(0 34px 58px rgba(0,0,0,.7))}.tablet{position:absolute;width:46%;right:-3%;bottom:-1%;filter:drop-shadow(0 25px 42px rgba(0,0,0,.65));animation:float 5.8s ease-in-out infinite}.featuregrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:27px}.feature{padding:18px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}.feature strong{display:block;color:#fff}
-.learngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.bonusgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.bonus{padding:30px;border-radius:24px;background:radial-gradient(circle at 100% 0,rgba(253,77,222,.13),transparent 35%),var(--card);border:1px solid var(--line)}.bonus span{color:var(--y);font-size:.78rem;font-weight:950;letter-spacing:.11em;text-transform:uppercase}.resultvisual{min-height:600px;position:relative;display:grid;place-items:center}.resultbox{width:82%;filter:drop-shadow(0 36px 62px rgba(0,0,0,.72));animation:float 5.6s ease-in-out infinite}
-.media{position:relative;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.13);box-shadow:var(--shadow)}.media img{width:100%;height:100%;object-fit:cover;object-position:center top}.media:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,0,15,.46),transparent 48%)}.label{position:absolute;z-index:3;left:20px;right:20px;bottom:20px;padding:14px 16px;border-radius:15px;background:rgba(5,0,15,.83);border:1px solid rgba(35,230,238,.2);font-weight:800}.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0}.cred{padding:17px;border-radius:15px;border:1px solid rgba(132,81,255,.2);background:rgba(132,81,255,.045)}.cred b{color:var(--c)}
-.note{padding:17px 18px;border-left:4px solid var(--y);border-radius:12px;background:rgba(255,214,47,.07);margin-bottom:24px}.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tcard{min-height:245px;padding:24px;border-radius:19px;display:flex;flex-direction:column;justify-content:space-between;border:1px dashed rgba(255,255,255,.18);background:rgba(255,255,255,.025)}.stars{color:var(--y);letter-spacing:.1em}.tcard small{color:var(--m)}
-.offer{padding:110px 0;background:radial-gradient(circle at 7% 60%,rgba(255,214,47,.09),transparent 25rem),radial-gradient(circle at 85% 30%,rgba(122,62,255,.16),transparent 29rem)}.ad{border-radius:28px;overflow:hidden;border:1px solid rgba(255,214,47,.35);box-shadow:var(--shadow)}.pricecard{padding:40px;border-radius:30px;background:radial-gradient(circle at 100% 0,rgba(35,230,238,.11),transparent 33%),#0b041d;border:1px solid rgba(132,81,255,.3);box-shadow:var(--shadow)}.old{color:#b6adc6;text-decoration:line-through;text-decoration-color:#ff3b45;text-decoration-thickness:3px;font-weight:850}.price{display:flex;align-items:flex-start;margin:14px 0 20px;color:var(--y);font-weight:1000;line-height:.82}.price .cur{font-size:2.2rem;margin-top:10px}.price .amt{font-size:clamp(5.2rem,9vw,8rem);letter-spacing:-.08em}.price .usd{align-self:flex-end;color:#fff;font-size:1rem;margin:0 0 12px 10px}.pricecard .btn{width:100%}.secure{text-align:center;color:#958ca8;font-size:.82rem;margin-top:13px}
-.faq{max-width:900px;margin:auto}details{margin-bottom:12px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.03);overflow:hidden}summary{padding:20px 22px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-weight:850}summary:after{content:"+";color:var(--c);font-size:1.4rem}details[open] summary:after{content:"−"}details p{padding:0 22px 21px;margin:0;color:#aca3be}.final{padding:90px 0;text-align:center}.finalcard{padding:72px 28px;border-radius:34px;border:1px solid rgba(132,81,255,.3);background:radial-gradient(circle at 50% 0,rgba(132,81,255,.22),transparent 50%),#09031b;box-shadow:var(--shadow)}footer{padding:32px 0 105px;border-top:1px solid rgba(255,255,255,.065);color:#7e748f;font-size:.84rem}.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.sticky{position:fixed;z-index:70;right:20px;bottom:20px;min-height:58px;padding:0 22px;border-radius:15px;display:flex;align-items:center;justify-content:center;color:#110800;text-decoration:none;font-weight:1000;background:linear-gradient(135deg,#fff69a,var(--y),#ff9b18);box-shadow:0 18px 55px rgba(0,0,0,.55);transform:translateY(100px);opacity:0;transition:.35s}.sticky.show{transform:none;opacity:1}.reveal{opacity:0;transform:translateY(28px);transition:.75s}.reveal.on{opacity:1;transform:none}
-@media(max-width:1100px){.modules{grid-template-columns:repeat(3,1fr)}}@media(max-width:1000px){.hero-grid,.grid2,.devicegrid,.resultgrid,.mentorgrid,.offergrid{grid-template-columns:1fr}.heroart{min-height:620px;max-width:720px;width:100%;margin:auto}.audience{grid-template-columns:1fr 1fr}.learngrid{grid-template-columns:1fr 1fr}.bonusgrid,.testimonials{grid-template-columns:1fr}.devices{min-height:500px}.ad{max-width:690px;margin:auto}}
-@media(max-width:760px){.section{padding:78px 0}.links{display:none;position:absolute;top:77px;left:18px;right:18px;padding:12px;flex-direction:column;align-items:stretch;background:rgba(6,0,17,.98);border:1px solid var(--line);border-radius:18px}.links.open{display:flex}.links>a{padding:12px}.menu{display:block}h1{font-size:clamp(3rem,15vw,5rem)}h2{font-size:clamp(2.25rem,10vw,3.6rem)}.hero{min-height:auto;padding-top:58px}.heroart{min-height:500px}.mentorframe{inset:2% 2% 4% 12%}.boxfloat{width:66%;left:-4%}.audience,.learngrid,.modules{grid-template-columns:1fr}.devices{min-height:380px}.featuregrid,.creds{grid-template-columns:1fr}.panel,.testimonialarea,.pricecard{padding:29px 23px}.sticky{left:10px;right:10px;bottom:10px}footer{padding-bottom:100px}}
-@media(max-width:480px){.container{width:calc(100% - 24px)}.offerbar{font-size:.72rem}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.heroart{min-height:410px}.chip{padding:8px 9px;font-size:.64rem}.c1{left:0;top:3%}.c2{right:0;top:27%}.c3{right:0;bottom:7%}.finalcard{padding:52px 18px}}
-</style></head><body>
-<div class="offerbar">OFERTA ACTUAL · BOOKPROFIT IA™ POR US$19 · ACCESO INMEDIATO</div>
-<nav class="nav"><div class="container navin"><a class="brand" href="#inicio"><span class="brandmark">BP</span><span>BookProfit <b class="cyan">IA™</b><small>LIBROS DIGITALES CON IA</small></span></a><button class="menu" id="menu">☰</button><div class="links" id="links"><a href="#aprendes">Qué aprenderás</a><a href="#modulos">Módulos</a><a href="#bonos">Bonos</a><a href="#mentor">Instructor</a><a class="primary btn buy sm" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Inscribirme ahora</a></div></div></nav>
-<main>
-<section class="hero" id="inicio"><div class="container hero-grid"><div class="reveal"><span class="eyebrow">Curso online paso a paso</span><h1>Convierte una idea en un <span class="gradient">libro digital listo para vender.</span></h1><p class="lead">Aprende a crear libros profesionales con ChatGPT y Canva, agrega bonos y Order Bumps, publícalos en Hotmart y construye un método que podrás repetir.</p><div class="hero-actions"><a class="primary btn buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Quiero crear mi primer libro →</a><a class="btn secondary" href="#modulos">Ver contenido</a></div><div class="trust"><span>Sin experiencia previa</span><span>Método práctico</span><span>Acceso inmediato</span></div><div class="mini"><strong>US$19</strong><span>Oferta actual<br/>Pago procesado en Hotmart</span></div></div><div class="heroart reveal" id="tilt"><div class="mentorframe" id="mentorcard"><img alt="Víctor Naranjo" src="assets/mentor.webp"/></div><img alt="BookProfit IA" class="boxfloat" src="assets/box.webp"/><div class="chip c1"><b>ChatGPT</b><br/>para crear contenido</div><div class="chip c2">Diseño con <b>Canva</b></div><div class="chip c3">Publicación en <b>Hotmart</b></div></div></div></section>
-<div class="ticker"><div class="track"><span><i>✦</i> ChatGPT</span><span><i>✦</i> Canva</span><span><i>✦</i> Libros digitales</span><span><i>✦</i> Bonos</span><span><i>✦</i> Order Bumps</span><span><i>✦</i> Hotmart</span><span><i>✦</i> Afiliados</span><span><i>✦</i> Productos digitales</span><span><i>✦</i> ChatGPT</span><span><i>✦</i> Canva</span><span><i>✦</i> Libros digitales</span><span><i>✦</i> Bonos</span><span><i>✦</i> Order Bumps</span><span><i>✦</i> Hotmart</span><span><i>✦</i> Afiliados</span><span><i>✦</i> Productos digitales</span></div></div>
-<section class="section"><div class="container"><div class="heading reveal"><span class="eyebrow">No necesitas ser escritor ni diseñador</span><h2>La IA puede ayudarte a pasar de la idea a la <span class="gradient">ejecución profesional.</span></h2></div><div class="grid2"><article class="panel reveal"><p class="quote">“Tu próximo producto digital puede estar listo antes de lo que imaginas.”</p><p class="lead">BookProfit IA™ te enseña un proceso claro para crear, diseñar, aumentar el valor y publicar un libro digital.</p></article><article class="panel reveal"><h3>La ruta que seguirás:</h3><div class="steps"><div class="step"><b>1</b><div><strong>Define la idea</strong><br/><span class="muted">Tema, lector y objetivo.</span></div></div><div class="step"><b>2</b><div><strong>Crea con IA</strong><br/><span class="muted">Contenido, estructura e índice.</span></div></div><div class="step"><b>3</b><div><strong>Diseña en Canva</strong><br/><span class="muted">Portada y páginas premium.</span></div></div><div class="step"><b>4</b><div><strong>Publica y vende</strong><br/><span class="muted">Bonos, Order Bumps y Hotmart.</span></div></div></div></article></div></div></section>
-<section class="section"><div class="container"><div class="heading center reveal"><span class="eyebrow">Un método accesible</span><h2>Este programa es para ti si quieres <span class="gradient">crear un producto digital desde cero.</span></h2></div><div class="audience"><article class="aud reveal"><div class="audico">01</div><h3>Emprendedores digitales</h3><p>Que desean comenzar con un producto sencillo de crear y comercializar.</p></article>
-<article class="aud reveal"><div class="audico">02</div><h3>Afiliados de Hotmart</h3><p>Que quieren desarrollar productos propios y ampliar sus fuentes de ingresos.</p></article>
-<article class="aud reveal"><div class="audico">03</div><h3>Creadores y profesionales</h3><p>Que desean transformar su experiencia o conocimiento en un activo digital.</p></article>
-<article class="aud reveal"><div class="audico">04</div><h3>Principiantes con IA</h3><p>Que quieren utilizar ChatGPT y Canva siguiendo una ruta clara.</p></article></div></div></section>
-<section class="section" id="modulos"><div class="container"><div class="heading center reveal"><span class="eyebrow">Contenido del programa</span><h2>Cinco módulos para llegar hasta tu <span class="gradient">sistema de ventas en Hotmart.</span></h2></div><div class="modules"><article class="module reveal"><div class="num">01</div><small>Módulo 01</small><h3>Bienvenida y preparación</h3><p>Organiza el proyecto, conoce las herramientas y define la base de tu producto.</p></article>
-<article class="module reveal"><div class="num">02</div><small>Módulo 02</small><h3>Construye tu primer libro</h3><p>Crea contenido, índice, estructura, portada y páginas interiores paso a paso.</p></article>
-<article class="module reveal"><div class="num">03</div><small>Módulo 03</small><h3>Bonos irresistibles</h3><p>Incrementa el valor percibido de tu oferta con recursos complementarios.</p></article>
-<article class="module reveal"><div class="num">04</div><small>Módulo 04</small><h3>Order Bumps</h3><p>Diseña productos adicionales para aumentar el valor potencial de cada compra.</p></article>
-<article class="module reveal"><div class="num">05</div><small>Módulo 05</small><h3>Lanzamiento en Hotmart</h3><p>Publica, configura, prepara afiliados y activa tu sistema de ventas.</p></article></div></div></section>
-<section class="section" id="aprendes"><div class="container devicegrid"><div class="devices reveal"><img alt="Curso en computadora" class="laptop" src="assets/laptop.webp"/><img alt="Curso en tablet" class="tablet" src="assets/tablet.webp"/></div><div class="reveal"><span class="eyebrow">Aprende y aplica</span><h2>Domina un proceso que podrás repetir para crear <span class="gradient">nuevos productos.</span></h2><p class="lead">No solo terminarás un libro: aprenderás una metodología para ampliar tu catálogo.</p><div class="featuregrid"><div class="feature"><strong>Contenido con ChatGPT</strong><span class="muted">Genera y mejora textos con IA.</span></div><div class="feature"><strong>Diseño con Canva</strong><span class="muted">Crea una apariencia premium.</span></div><div class="feature"><strong>Oferta de mayor valor</strong><span class="muted">Añade bonos y complementos.</span></div><div class="feature"><strong>Publicación en Hotmart</strong><span class="muted">Deja todo listo para comercializar.</span></div></div></div></div></section>
-<section class="section-sm"><div class="container"><div class="heading center reveal"><span class="eyebrow">Habilidades prácticas</span><h2>Todo lo que aprenderás dentro de <span class="gradient">BookProfit IA™.</span></h2></div><div class="learngrid"><article class="learn reveal"><div class="ico">AI</div><h3>Contenido con ChatGPT</h3><p>Genera, organiza y mejora capítulos, ideas y títulos con Inteligencia Artificial.</p></article>
-<article class="learn reveal"><div class="ico">C</div><h3>Diseño con Canva</h3><p>Crea portadas y páginas interiores con una apariencia profesional y premium.</p></article>
-<article class="learn reveal"><div class="ico">≡</div><h3>Índice profesional</h3><p>Organiza la información para facilitar la lectura y elevar la presentación.</p></article>
-<article class="learn reveal"><div class="ico">+</div><h3>Bonos de valor</h3><p>Agrega recursos que vuelvan más atractiva y completa tu oferta.</p></article>
-<article class="learn reveal"><div class="ico">↑</div><h3>Order Bumps</h3><p>Configura complementos para aumentar el valor de cada transacción.</p></article>
-<article class="learn reveal"><div class="ico">H</div><h3>Hotmart y afiliados</h3><p>Publica tu producto, prepara materiales y actívalo para afiliación.</p></article></div></div></section>
-<section class="section" id="bonos"><div class="container"><div class="heading center reveal"><span class="eyebrow">Bonos incluidos</span><h2>Más acompañamiento para avanzar con <span class="gradient">mayor seguridad.</span></h2></div><div class="bonusgrid"><article class="bonus reveal"><span>Bono 1</span><h3>Grupo privado de WhatsApp</h3><p>Comparte avances, plantea dudas y recibe apoyo durante la implementación.</p></article>
-<article class="bonus reveal"><span>Bono 2</span><h3>Mentorías de acompañamiento</h3><p>Recibe orientación para aplicar correctamente el método y superar bloqueos.</p></article>
-<article class="bonus reveal"><span>Bono 3</span><h3>Actualizaciones del programa</h3><p>Accede a mejoras futuras relacionadas con el contenido y las herramientas.</p></article></div></div></section>
-<section class="section"><div class="container resultgrid"><div class="resultvisual reveal"><img alt="Resultado BookProfit IA" class="resultbox" src="assets/box.webp"/></div><div class="reveal"><span class="eyebrow">Resultado final</span><h2>Termina con un producto digital <span class="gradient">completo y preparado para vender.</span></h2><p class="lead">Habrás creado un libro profesional, diseñado bonos y Order Bumps y publicado el producto en Hotmart.</p><div class="checks"><div class="check"><i>✓</i><div><strong>Libro digital terminado</strong><br/><span class="muted">Contenido, estructura y diseño.</span></div></div><div class="check"><i>✓</i><div><strong>Oferta de mayor valor</strong><br/><span class="muted">Bonos y Order Bumps.</span></div></div><div class="check"><i>✓</i><div><strong>Producto publicado</strong><br/><span class="muted">Configuración y afiliados.</span></div></div><div class="check"><i>✓</i><div><strong>Método reutilizable</strong><br/><span class="muted">Para nuevos productos.</span></div></div></div><a class="primary btn buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Quiero BookProfit IA™</a></div></div></section>
-<section class="section" id="mentor"><div class="container mentorgrid"><div class="media reveal" style="max-height:760px"><img alt="Víctor Naranjo" src="assets/mentor.webp"/><div class="label"><b class="cyan">Víctor Naranjo</b><br/>Instructor de BookProfit IA™</div></div><div class="reveal"><span class="eyebrow">Sobre el instructor</span><h2>Aprende con un especialista en <span class="gradient">productos digitales y marketing.</span></h2><p class="lead">Víctor Naranjo cuenta con más de seis años de experiencia en creación, lanzamiento, posicionamiento y venta de productos digitales.</p><p>Ha trabajado con emprendedores, comunidades y programas de afiliación dentro del ecosistema de Hotmart. Su metodología es práctica, clara y orientada a la acción.</p><div class="creds"><div class="cred"><b>6+ años</b><br/><span class="muted">de experiencia digital</span></div><div class="cred"><b>Hotmart</b><br/><span class="muted">productos y afiliación</span></div><div class="cred"><b>Agencia propia</b><br/><span class="muted">marketing y automatización</span></div><div class="cred"><b>Metodología práctica</b><br/><span class="muted">paso a paso</span></div></div><a class="primary btn buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Aprender con Víctor</a></div></div></section>
+<html lang="es">
 
-<section class="offer" id="oferta"><div class="container offergrid"><div class="ad reveal"><img alt="Oferta BookProfit IA" src="assets/anuncio.webp"/></div><div class="pricecard reveal"><span class="eyebrow">Acceso al programa completo</span><h2 style="margin-top:18px">Convierte tus conocimientos en un <span class="gradient">producto comercializable.</span></h2><p class="lead">Accede al curso, crea tu libro, aumenta el valor de la oferta y deja todo preparado para vender.</p><span class="old">Precio oficial: US$57</span><div class="price"><span class="cur">US$</span><span class="amt">19</span><span class="usd">pago único</span></div><div class="checks"><div class="check"><i>✓</i><div><strong>Acceso inmediato</strong></div></div><div class="check"><i>✓</i><div><strong>Bonos y acompañamiento</strong></div></div><div class="check"><i>✓</i><div><strong>Actualizaciones del programa</strong></div></div></div><a class="primary btn buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Inscribirme de forma segura en Hotmart →</a><div class="secure">Agrega el enlace de pago antes de publicar.</div></div></div></section>
-<section class="section"><div class="container"><div class="heading center reveal"><span class="eyebrow">Preguntas frecuentes</span><h2>Resuelve tus dudas antes de <span class="gradient">comenzar.</span></h2></div><div class="faq reveal"><details><summary>¿Necesito saber diseñar o escribir?</summary><p>No. El programa comienza desde cero y utiliza ChatGPT y Canva para simplificar el proceso.</p></details><details><summary>¿Qué tendré al finalizar?</summary><p>Un libro digital profesional, bonos, Order Bumps y el producto publicado en Hotmart.</p></details><details><summary>¿Puedo repetir el método?</summary><p>Sí. La metodología está pensada para aplicarse a diferentes nichos y ampliar tu catálogo.</p></details><details><summary>¿Qué herramientas se usan?</summary><p>ChatGPT, Canva y Hotmart.</p></details><details><summary>¿Incluye acompañamiento?</summary><p>Sí. La ficha incluye grupo privado de WhatsApp, mentorías y actualizaciones.</p></details></div></div></section>
-<section class="final"><div class="container"><div class="finalcard reveal"><span class="eyebrow">Empieza a crear hoy</span><h2>Tu idea puede convertirse en el primer producto de un <span class="gradient">catálogo digital.</span></h2><p class="lead" style="margin-inline:auto">Sigue una ruta práctica y crea un activo digital que puedas mejorar, publicar y replicar.</p><a class="primary btn buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" rel="noopener noreferrer" target="_blank">Quiero comenzar por US$19</a></div></div></section>
-</main><footer><div class="container footerin"><div>© 2026 BookProfit IA™. Todos los derechos reservados.</div><div>Los resultados dependen de la implementación, experiencia, esfuerzo y condiciones de mercado.</div></div></footer><a class="sticky buy" href="https://pay.hotmart.com/P106684536S?bid=1784219837991" id="sticky" rel="noopener noreferrer" target="_blank">Inscribirme ahora · US$19 →</a>
-<script>
-const PAYMENT_LINK="https://pay.hotmart.com/P106684536S?bid=1784219837991";
-document.querySelectorAll(".buy").forEach(a=>{a.href=PAYMENT_LINK;a.target="_blank";a.rel="noopener noreferrer";});
-const menu=document.getElementById("menu"),links=document.getElementById("links");menu?.addEventListener("click",()=>links.classList.toggle("open"));links?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>links.classList.remove("open")));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-const sticky=document.getElementById("sticky");addEventListener("scroll",()=>sticky.classList.toggle("show",scrollY>720),{passive:true});
-const tilt=document.getElementById("tilt"),card=document.getElementById("mentorcard");if(tilt&&card&&matchMedia("(pointer:fine)").matches){tilt.addEventListener("mousemove",e=>{const r=tilt.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`rotateY(${x*7}deg) rotateX(${-y*6}deg) rotate(2.2deg)`});tilt.addEventListener("mouseleave",()=>card.style.transform="rotate(2.2deg)")}
-</script></body></html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="BookProfit IA: crea y vende libros digitales con ChatGPT, Canva y Hotmart." name="description" />
+    <meta content="#070019" name="theme-color" />
+    <title>BookProfit IA™ | Crea y vende libros digitales</title>
+    <style>
+        :root {
+            --bg: #05000f;
+            --p: #8b3dff;
+            --p2: #c35cff;
+            --b: #437dff;
+            --c: #23e6ee;
+            --y: #ffd62f;
+            --w: #fbf9ff;
+            --t: #d9d2e8;
+            --m: #9e95b4;
+            --card: #10072b;
+            --line: rgba(255, 255, 255, .09);
+            --max: 1220px;
+            --shadow: 0 35px 100px rgba(0, 0, 0, .58)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            color: var(--w);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+            line-height: 1.62;
+            overflow-x: hidden;
+            background: radial-gradient(circle at 85% -5%, rgba(90, 58, 255, .26), transparent 30rem), radial-gradient(circle at -10% 35%, rgba(216, 47, 255, .14), transparent 29rem), linear-gradient(180deg, #04000c, #0a031d 48%, #030009)
+        }
+
+        body:before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            opacity: .17;
+            pointer-events: none;
+            background-image: linear-gradient(rgba(255, 255, 255, .028) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .028) 1px, transparent 1px);
+            background-size: 58px 58px;
+            mask-image: linear-gradient(#000, transparent 88%)
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            color: inherit
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 40px));
+            margin: auto
+        }
+
+        .section {
+            padding: 104px 0
+        }
+
+        .section-sm {
+            padding: 72px 0
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1 {
+            font-size: clamp(3rem, 7.4vw, 7.2rem);
+            line-height: .89;
+            letter-spacing: -.072em;
+            margin: 20px 0 24px
+        }
+
+        h2 {
+            font-size: clamp(2.25rem, 4.8vw, 5rem);
+            line-height: .98;
+            letter-spacing: -.052em;
+            margin-bottom: 18px
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 2vw, 1.65rem);
+            line-height: 1.16;
+            margin-bottom: 10px
+        }
+
+        p {
+            color: var(--t)
+        }
+
+        .lead {
+            font-size: clamp(1.03rem, 1.65vw, 1.28rem);
+            line-height: 1.72;
+            max-width: 760px
+        }
+
+        .muted {
+            color: var(--m)
+        }
+
+        .gradient {
+            color: transparent;
+            background: linear-gradient(104deg, #fff, #c9c4ff 28%, var(--p2) 58%, var(--c));
+            -webkit-background-clip: text;
+            background-clip: text
+        }
+
+        .cyan {
+            color: var(--c)
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(35, 230, 238, .3);
+            border-radius: 999px;
+            color: var(--c);
+            background: rgba(35, 230, 238, .07);
+            font-size: .76rem;
+            font-weight: 950;
+            letter-spacing: .1em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--c);
+            box-shadow: 0 0 16px var(--c)
+        }
+
+        .btn {
+            min-height: 58px;
+            padding: 0 24px;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 950;
+            border: 1px solid transparent;
+            transition: .23s ease;
+            cursor: pointer
+        }
+
+        .btn:hover {
+            transform: translateY(-3px)
+        }
+
+        .primary {
+            color: #0b0713;
+            background: linear-gradient(135deg, #fff4a1, var(--y) 40%, #ff9d1f);
+            box-shadow: 0 16px 45px rgba(255, 177, 31, .28)
+        }
+
+        .secondary {
+            background: rgba(255, 255, 255, .055);
+            border-color: rgba(255, 255, 255, .14)
+        }
+
+        .sm {
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 12px;
+            font-size: .9rem
+        }
+
+        .offerbar {
+            padding: 10px 16px;
+            text-align: center;
+            color: #140b00;
+            background: linear-gradient(90deg, #ff9d00, #ffe45e, #ff9d00);
+            font-weight: 1000;
+            font-size: .82rem;
+            letter-spacing: .035em
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 80;
+            background: rgba(5, 0, 15, .74);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, .07)
+        }
+
+        .navin {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+            font-weight: 950
+        }
+
+        .brandmark {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: linear-gradient(145deg, var(--p2), var(--b));
+            box-shadow: 0 0 30px rgba(121, 71, 255, .3)
+        }
+
+        .brand small {
+            display: block;
+            color: var(--c);
+            font-size: .62rem;
+            letter-spacing: .14em
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 25px
+        }
+
+        .links>a:not(.btn) {
+            text-decoration: none;
+            color: #d7d0e6;
+            font-size: .91rem;
+            font-weight: 780
+        }
+
+        .menu {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .07);
+            color: #fff;
+            font-size: 1.3rem
+        }
+
+        .hero {
+            min-height: calc(100vh - 116px);
+            display: grid;
+            align-items: center;
+            padding: 72px 0 70px;
+            overflow: hidden;
+            position: relative
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.06fr .94fr;
+            gap: 46px;
+            align-items: center
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin: 30px 0 18px
+        }
+
+        .trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #b8afc8;
+            font-size: .88rem
+        }
+
+        .trust span:before {
+            content: "✓";
+            color: var(--c);
+            font-weight: 1000;
+            margin-right: 7px
+        }
+
+        .mini {
+            display: inline-flex;
+            gap: 14px;
+            align-items: center;
+            margin-top: 24px;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 214, 47, .25);
+            border-radius: 16px;
+            background: rgba(20, 8, 39, .75)
+        }
+
+        .mini strong {
+            color: var(--y);
+            font-size: 1.7rem
+        }
+
+        .mini span {
+            font-size: .82rem;
+            color: #b8afc8
+        }
+
+        .heroart {
+            position: relative;
+            min-height: 650px;
+            perspective: 1200px
+        }
+
+        .mentorframe {
+            position: absolute;
+            inset: 2% 5% 3% 19%;
+            overflow: hidden;
+            border-radius: 34px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            box-shadow: var(--shadow);
+            transform: rotate(2.2deg);
+            transition: .18s
+        }
+
+        .mentorframe img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%
+        }
+
+        .mentorframe:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(5, 0, 15, .55), transparent 55%)
+        }
+
+        .boxfloat {
+            position: absolute;
+            z-index: 5;
+            left: -5%;
+            bottom: -1%;
+            width: 62%;
+            filter: drop-shadow(0 30px 46px rgba(0, 0, 0, .72));
+            animation: float 5.4s ease-in-out infinite
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-16px) rotate(-1deg)
+            }
+        }
+
+        .chip {
+            position: absolute;
+            z-index: 7;
+            padding: 11px 14px;
+            border: 1px solid rgba(35, 230, 238, .24);
+            border-radius: 14px;
+            background: rgba(8, 2, 23, .9);
+            font-size: .8rem;
+            font-weight: 900
+        }
+
+        .chip b {
+            color: var(--c)
+        }
+
+        .c1 {
+            left: 1%;
+            top: 9%
+        }
+
+        .c2 {
+            right: -2%;
+            top: 24%
+        }
+
+        .c3 {
+            right: 0;
+            bottom: 12%
+        }
+
+        .ticker {
+            overflow: hidden;
+            border-block: 1px solid rgba(255, 255, 255, .07)
+        }
+
+        .track {
+            display: flex;
+            width: max-content;
+            padding: 20px 0;
+            animation: marquee 30s linear infinite;
+            text-transform: uppercase;
+            font-size: .78rem;
+            font-weight: 900;
+            letter-spacing: .1em
+        }
+
+        .track span {
+            margin: 0 28px
+        }
+
+        .track i {
+            color: var(--c);
+            font-style: normal
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        .heading {
+            max-width: 860px;
+            margin-bottom: 48px
+        }
+
+        .center {
+            text-align: center;
+            margin-inline: auto
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px
+        }
+
+        .panel,
+        .testimonialarea {
+            padding: 40px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .017)), rgba(15, 8, 36, .82);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow)
+        }
+
+        .quote {
+            font-size: clamp(1.75rem, 3vw, 2.7rem);
+            line-height: 1.12;
+            font-weight: 950;
+            letter-spacing: -.04em
+        }
+
+        .steps,
+        .checks {
+            display: grid;
+            gap: 13px;
+            margin-top: 24px
+        }
+
+        .step,
+        .check {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(255, 255, 255, .075)
+        }
+
+        .step>b,
+        .check i {
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: var(--c);
+            color: #08010f;
+            font-style: normal;
+            font-weight: 1000
+        }
+
+        .audience {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .aud,
+        .learn {
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .033);
+            border: 1px solid rgba(255, 255, 255, .08);
+            transition: .25s
+        }
+
+        .aud:hover,
+        .learn:hover {
+            transform: translateY(-7px);
+            border-color: rgba(35, 230, 238, .32)
+        }
+
+        .audico,
+        .ico {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            background: linear-gradient(145deg, var(--p2), var(--b));
+            font-weight: 1000
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px
+        }
+
+        .module {
+            padding: 26px 22px;
+            border-radius: 23px;
+            background: linear-gradient(180deg, rgba(27, 12, 58, .96), rgba(8, 3, 20, .98));
+            border: 1px solid var(--line);
+            transition: .25s
+        }
+
+        .module:hover {
+            transform: translateY(-8px);
+            border-color: rgba(132, 81, 255, .42)
+        }
+
+        .num {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            margin-bottom: 22px;
+            background: linear-gradient(145deg, var(--p2), var(--b));
+            font-weight: 1000
+        }
+
+        .module small {
+            color: var(--c);
+            font-weight: 950;
+            letter-spacing: .1em;
+            text-transform: uppercase
+        }
+
+        .module p {
+            color: var(--m)
+        }
+
+        .devicegrid,
+        .resultgrid,
+        .mentorgrid,
+        .offergrid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 55px;
+            align-items: center
+        }
+
+        .devices {
+            position: relative;
+            min-height: 560px;
+            display: grid;
+            place-items: center
+        }
+
+        .laptop {
+            width: 112%;
+            filter: drop-shadow(0 34px 58px rgba(0, 0, 0, .7))
+        }
+
+        .tablet {
+            position: absolute;
+            width: 46%;
+            right: -3%;
+            bottom: -1%;
+            filter: drop-shadow(0 25px 42px rgba(0, 0, 0, .65));
+            animation: float 5.8s ease-in-out infinite
+        }
+
+        .featuregrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 27px
+        }
+
+        .feature {
+            padding: 18px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(255, 255, 255, .08)
+        }
+
+        .feature strong {
+            display: block;
+            color: #fff
+        }
+
+        .learngrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .bonusgrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px
+        }
+
+        .bonus {
+            padding: 30px;
+            border-radius: 24px;
+            background: radial-gradient(circle at 100% 0, rgba(253, 77, 222, .13), transparent 35%), var(--card);
+            border: 1px solid var(--line)
+        }
+
+        .bonus span {
+            color: var(--y);
+            font-size: .78rem;
+            font-weight: 950;
+            letter-spacing: .11em;
+            text-transform: uppercase
+        }
+
+        .resultvisual {
+            min-height: 600px;
+            position: relative;
+            display: grid;
+            place-items: center
+        }
+
+        .resultbox {
+            width: 82%;
+            filter: drop-shadow(0 36px 62px rgba(0, 0, 0, .72));
+            animation: float 5.6s ease-in-out infinite
+        }
+
+        .media {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .13);
+            box-shadow: var(--shadow)
+        }
+
+        .media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top
+        }
+
+        .media:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(5, 0, 15, .46), transparent 48%)
+        }
+
+        .label {
+            position: absolute;
+            z-index: 3;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            padding: 14px 16px;
+            border-radius: 15px;
+            background: rgba(5, 0, 15, .83);
+            border: 1px solid rgba(35, 230, 238, .2);
+            font-weight: 800
+        }
+
+        .creds {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 26px 0
+        }
+
+        .cred {
+            padding: 17px;
+            border-radius: 15px;
+            border: 1px solid rgba(132, 81, 255, .2);
+            background: rgba(132, 81, 255, .045)
+        }
+
+        .cred b {
+            color: var(--c)
+        }
+
+        .note {
+            padding: 17px 18px;
+            border-left: 4px solid var(--y);
+            border-radius: 12px;
+            background: rgba(255, 214, 47, .07);
+            margin-bottom: 24px
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .tcard {
+            min-height: 245px;
+            padding: 24px;
+            border-radius: 19px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px dashed rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .025)
+        }
+
+        .stars {
+            color: var(--y);
+            letter-spacing: .1em
+        }
+
+        .tcard small {
+            color: var(--m)
+        }
+
+        .offer {
+            padding: 110px 0;
+            background: radial-gradient(circle at 7% 60%, rgba(255, 214, 47, .09), transparent 25rem), radial-gradient(circle at 85% 30%, rgba(122, 62, 255, .16), transparent 29rem)
+        }
+
+        .ad {
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 214, 47, .35);
+            box-shadow: var(--shadow)
+        }
+
+        .pricecard {
+            padding: 40px;
+            border-radius: 30px;
+            background: radial-gradient(circle at 100% 0, rgba(35, 230, 238, .11), transparent 33%), #0b041d;
+            border: 1px solid rgba(132, 81, 255, .3);
+            box-shadow: var(--shadow)
+        }
+
+        .old {
+            color: #b6adc6;
+            text-decoration: line-through;
+            text-decoration-color: #ff3b45;
+            text-decoration-thickness: 3px;
+            font-weight: 850
+        }
+
+        .price {
+            display: flex;
+            align-items: flex-start;
+            margin: 14px 0 20px;
+            color: var(--y);
+            font-weight: 1000;
+            line-height: .82
+        }
+
+        .price .cur {
+            font-size: 2.2rem;
+            margin-top: 10px
+        }
+
+        .price .amt {
+            font-size: clamp(5.2rem, 9vw, 8rem);
+            letter-spacing: -.08em
+        }
+
+        .price .usd {
+            align-self: flex-end;
+            color: #fff;
+            font-size: 1rem;
+            margin: 0 0 12px 10px
+        }
+
+        .pricecard .btn {
+            width: 100%
+        }
+
+        .secure {
+            text-align: center;
+            color: #958ca8;
+            font-size: .82rem;
+            margin-top: 13px
+        }
+
+        .faq {
+            max-width: 900px;
+            margin: auto
+        }
+
+        details {
+            margin-bottom: 12px;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            background: rgba(255, 255, 255, .03);
+            overflow: hidden
+        }
+
+        summary {
+            padding: 20px 22px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 850
+        }
+
+        summary:after {
+            content: "+";
+            color: var(--c);
+            font-size: 1.4rem
+        }
+
+        details[open] summary:after {
+            content: "−"
+        }
+
+        details p {
+            padding: 0 22px 21px;
+            margin: 0;
+            color: #aca3be
+        }
+
+        .final {
+            padding: 90px 0;
+            text-align: center
+        }
+
+        .finalcard {
+            padding: 72px 28px;
+            border-radius: 34px;
+            border: 1px solid rgba(132, 81, 255, .3);
+            background: radial-gradient(circle at 50% 0, rgba(132, 81, 255, .22), transparent 50%), #09031b;
+            box-shadow: var(--shadow)
+        }
+
+        footer {
+            padding: 32px 0 105px;
+            border-top: 1px solid rgba(255, 255, 255, .065);
+            color: #7e748f;
+            font-size: .84rem
+        }
+
+        .footerin {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        .sticky {
+            position: fixed;
+            z-index: 70;
+            right: 20px;
+            bottom: 20px;
+            min-height: 58px;
+            padding: 0 22px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #110800;
+            text-decoration: none;
+            font-weight: 1000;
+            background: linear-gradient(135deg, #fff69a, var(--y), #ff9b18);
+            box-shadow: 0 18px 55px rgba(0, 0, 0, .55);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: .35s
+        }
+
+        .sticky.show {
+            transform: none;
+            opacity: 1
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: .75s
+        }
+
+        .reveal.on {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:1100px) {
+            .modules {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:1000px) {
+
+            .hero-grid,
+            .grid2,
+            .devicegrid,
+            .resultgrid,
+            .mentorgrid,
+            .offergrid {
+                grid-template-columns: 1fr
+            }
+
+            .heroart {
+                min-height: 620px;
+                max-width: 720px;
+                width: 100%;
+                margin: auto
+            }
+
+            .audience {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .learngrid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .bonusgrid,
+            .testimonials {
+                grid-template-columns: 1fr
+            }
+
+            .devices {
+                min-height: 500px
+            }
+
+            .ad {
+                max-width: 690px;
+                margin: auto
+            }
+        }
+
+        @media(max-width:760px) {
+            .section {
+                padding: 78px 0
+            }
+
+            .links {
+                display: none;
+                position: absolute;
+                top: 77px;
+                left: 18px;
+                right: 18px;
+                padding: 12px;
+                flex-direction: column;
+                align-items: stretch;
+                background: rgba(6, 0, 17, .98);
+                border: 1px solid var(--line);
+                border-radius: 18px
+            }
+
+            .links.open {
+                display: flex
+            }
+
+            .links>a {
+                padding: 12px
+            }
+
+            .menu {
+                display: block
+            }
+
+            h1 {
+                font-size: clamp(3rem, 15vw, 5rem)
+            }
+
+            h2 {
+                font-size: clamp(2.25rem, 10vw, 3.6rem)
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 58px
+            }
+
+            .heroart {
+                min-height: 500px
+            }
+
+            .mentorframe {
+                inset: 2% 2% 4% 12%
+            }
+
+            .boxfloat {
+                width: 66%;
+                left: -4%
+            }
+
+            .audience,
+            .learngrid,
+            .modules {
+                grid-template-columns: 1fr
+            }
+
+            .devices {
+                min-height: 380px
+            }
+
+            .featuregrid,
+            .creds {
+                grid-template-columns: 1fr
+            }
+
+            .panel,
+            .testimonialarea,
+            .pricecard {
+                padding: 29px 23px
+            }
+
+            .sticky {
+                left: 10px;
+                right: 10px;
+                bottom: 10px
+            }
+
+            footer {
+                padding-bottom: 100px
+            }
+        }
+
+        @media(max-width:480px) {
+            .container {
+                width: calc(100% - 24px)
+            }
+
+            .offerbar {
+                font-size: .72rem
+            }
+
+            .hero-actions {
+                flex-direction: column
+            }
+
+            .hero-actions .btn {
+                width: 100%
+            }
+
+            .heroart {
+                min-height: 410px
+            }
+
+            .chip {
+                padding: 8px 9px;
+                font-size: .64rem
+            }
+
+            .c1 {
+                left: 0;
+                top: 3%
+            }
+
+            .c2 {
+                right: 0;
+                top: 27%
+            }
+
+            .c3 {
+                right: 0;
+                bottom: 7%
+            }
+
+            .finalcard {
+                padding: 52px 18px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offerbar">OFERTA ACTUAL · BOOKPROFIT IA™ POR US$19 · ACCESO INMEDIATO</div>
+    <nav class="nav">
+        <div class="container navin"><a class="brand" href="#inicio"><span class="brandmark">BP</span><span>BookProfit
+                    <b class="cyan">IA™</b><small>LIBROS DIGITALES CON IA</small></span></a><button class="menu"
+                id="menu">☰</button>
+            <div class="links" id="links"><a href="#aprendes">Qué aprenderás</a><a href="#modulos">Módulos</a><a
+                    href="#bonos">Bonos</a><a href="#mentor">Instructor</a><a class="primary btn buy sm"
+                    href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                    rel="noopener noreferrer" target="_blank">Inscribirme ahora</a></div>
+        </div>
+    </nav>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="reveal"><span class="eyebrow">Curso online paso a paso</span>
+                    <h1>Convierte una idea en un <span class="gradient">libro digital listo para vender.</span></h1>
+                    <p class="lead">Aprende a crear libros profesionales con ChatGPT y Canva, agrega bonos y Order
+                        Bumps, publícalos en Hotmart y construye un método que podrás repetir.</p>
+                    <div class="hero-actions"><a class="primary btn buy"
+                            href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                            rel="noopener noreferrer" target="_blank">Quiero crear mi primer libro →</a><a
+                            class="btn secondary" href="#modulos">Ver contenido</a></div>
+                    <div class="trust"><span>Sin experiencia previa</span><span>Método práctico</span><span>Acceso
+                            inmediato</span></div>
+                    <div class="mini"><strong>US$19</strong><span>Oferta actual<br />Pago procesado en Hotmart</span>
+                    </div>
+                </div>
+                <div class="heroart reveal" id="tilt">
+                    <div class="mentorframe" id="mentorcard"><img alt="Víctor Naranjo" src="assets/mentor.webp" /></div>
+                    <img alt="BookProfit IA" class="boxfloat" src="assets/box.webp" />
+                    <div class="chip c1"><b>ChatGPT</b><br />para crear contenido</div>
+                    <div class="chip c2">Diseño con <b>Canva</b></div>
+                    <div class="chip c3">Publicación en <b>Hotmart</b></div>
+                </div>
+            </div>
+        </section>
+        <div class="ticker">
+            <div class="track"><span><i>✦</i> ChatGPT</span><span><i>✦</i> Canva</span><span><i>✦</i> Libros
+                    digitales</span><span><i>✦</i> Bonos</span><span><i>✦</i> Order Bumps</span><span><i>✦</i>
+                    Hotmart</span><span><i>✦</i> Afiliados</span><span><i>✦</i> Productos digitales</span><span><i>✦</i>
+                    ChatGPT</span><span><i>✦</i> Canva</span><span><i>✦</i> Libros digitales</span><span><i>✦</i>
+                    Bonos</span><span><i>✦</i> Order Bumps</span><span><i>✦</i> Hotmart</span><span><i>✦</i>
+                    Afiliados</span><span><i>✦</i> Productos digitales</span></div>
+        </div>
+        <section class="section">
+            <div class="container">
+                <div class="heading reveal"><span class="eyebrow">No necesitas ser escritor ni diseñador</span>
+                    <h2>La IA puede ayudarte a pasar de la idea a la <span class="gradient">ejecución
+                            profesional.</span></h2>
+                </div>
+                <div class="grid2">
+                    <article class="panel reveal">
+                        <p class="quote">“Tu próximo producto digital puede estar listo antes de lo que imaginas.”</p>
+                        <p class="lead">BookProfit IA™ te enseña un proceso claro para crear, diseñar, aumentar el valor
+                            y publicar un libro digital.</p>
+                    </article>
+                    <article class="panel reveal">
+                        <h3>La ruta que seguirás:</h3>
+                        <div class="steps">
+                            <div class="step"><b>1</b>
+                                <div><strong>Define la idea</strong><br /><span class="muted">Tema, lector y
+                                        objetivo.</span></div>
+                            </div>
+                            <div class="step"><b>2</b>
+                                <div><strong>Crea con IA</strong><br /><span class="muted">Contenido, estructura e
+                                        índice.</span></div>
+                            </div>
+                            <div class="step"><b>3</b>
+                                <div><strong>Diseña en Canva</strong><br /><span class="muted">Portada y páginas
+                                        premium.</span></div>
+                            </div>
+                            <div class="step"><b>4</b>
+                                <div><strong>Publica y vende</strong><br /><span class="muted">Bonos, Order Bumps y
+                                        Hotmart.</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="heading center reveal"><span class="eyebrow">Un método accesible</span>
+                    <h2>Este programa es para ti si quieres <span class="gradient">crear un producto digital desde
+                            cero.</span></h2>
+                </div>
+                <div class="audience">
+                    <article class="aud reveal">
+                        <div class="audico">01</div>
+                        <h3>Emprendedores digitales</h3>
+                        <p>Que desean comenzar con un producto sencillo de crear y comercializar.</p>
+                    </article>
+                    <article class="aud reveal">
+                        <div class="audico">02</div>
+                        <h3>Afiliados de Hotmart</h3>
+                        <p>Que quieren desarrollar productos propios y ampliar sus fuentes de ingresos.</p>
+                    </article>
+                    <article class="aud reveal">
+                        <div class="audico">03</div>
+                        <h3>Creadores y profesionales</h3>
+                        <p>Que desean transformar su experiencia o conocimiento en un activo digital.</p>
+                    </article>
+                    <article class="aud reveal">
+                        <div class="audico">04</div>
+                        <h3>Principiantes con IA</h3>
+                        <p>Que quieren utilizar ChatGPT y Canva siguiendo una ruta clara.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="modulos">
+            <div class="container">
+                <div class="heading center reveal"><span class="eyebrow">Contenido del programa</span>
+                    <h2>Cinco módulos para llegar hasta tu <span class="gradient">sistema de ventas en Hotmart.</span>
+                    </h2>
+                </div>
+                <div class="modules">
+                    <article class="module reveal">
+                        <div class="num">01</div><small>Módulo 01</small>
+                        <h3>Bienvenida y preparación</h3>
+                        <p>Organiza el proyecto, conoce las herramientas y define la base de tu producto.</p>
+                    </article>
+                    <article class="module reveal">
+                        <div class="num">02</div><small>Módulo 02</small>
+                        <h3>Construye tu primer libro</h3>
+                        <p>Crea contenido, índice, estructura, portada y páginas interiores paso a paso.</p>
+                    </article>
+                    <article class="module reveal">
+                        <div class="num">03</div><small>Módulo 03</small>
+                        <h3>Bonos irresistibles</h3>
+                        <p>Incrementa el valor percibido de tu oferta con recursos complementarios.</p>
+                    </article>
+                    <article class="module reveal">
+                        <div class="num">04</div><small>Módulo 04</small>
+                        <h3>Order Bumps</h3>
+                        <p>Diseña productos adicionales para aumentar el valor potencial de cada compra.</p>
+                    </article>
+                    <article class="module reveal">
+                        <div class="num">05</div><small>Módulo 05</small>
+                        <h3>Lanzamiento en Hotmart</h3>
+                        <p>Publica, configura, prepara afiliados y activa tu sistema de ventas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="aprendes">
+            <div class="container devicegrid">
+                <div class="devices reveal"><img alt="Curso en computadora" class="laptop"
+                        src="assets/laptop.webp" /><img alt="Curso en tablet" class="tablet" src="assets/tablet.webp" />
+                </div>
+                <div class="reveal"><span class="eyebrow">Aprende y aplica</span>
+                    <h2>Domina un proceso que podrás repetir para crear <span class="gradient">nuevos productos.</span>
+                    </h2>
+                    <p class="lead">No solo terminarás un libro: aprenderás una metodología para ampliar tu catálogo.
+                    </p>
+                    <div class="featuregrid">
+                        <div class="feature"><strong>Contenido con ChatGPT</strong><span class="muted">Genera y mejora
+                                textos con IA.</span></div>
+                        <div class="feature"><strong>Diseño con Canva</strong><span class="muted">Crea una apariencia
+                                premium.</span></div>
+                        <div class="feature"><strong>Oferta de mayor valor</strong><span class="muted">Añade bonos y
+                                complementos.</span></div>
+                        <div class="feature"><strong>Publicación en Hotmart</strong><span class="muted">Deja todo listo
+                                para comercializar.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-sm">
+            <div class="container">
+                <div class="heading center reveal"><span class="eyebrow">Habilidades prácticas</span>
+                    <h2>Todo lo que aprenderás dentro de <span class="gradient">BookProfit IA™.</span></h2>
+                </div>
+                <div class="learngrid">
+                    <article class="learn reveal">
+                        <div class="ico">AI</div>
+                        <h3>Contenido con ChatGPT</h3>
+                        <p>Genera, organiza y mejora capítulos, ideas y títulos con Inteligencia Artificial.</p>
+                    </article>
+                    <article class="learn reveal">
+                        <div class="ico">C</div>
+                        <h3>Diseño con Canva</h3>
+                        <p>Crea portadas y páginas interiores con una apariencia profesional y premium.</p>
+                    </article>
+                    <article class="learn reveal">
+                        <div class="ico">≡</div>
+                        <h3>Índice profesional</h3>
+                        <p>Organiza la información para facilitar la lectura y elevar la presentación.</p>
+                    </article>
+                    <article class="learn reveal">
+                        <div class="ico">+</div>
+                        <h3>Bonos de valor</h3>
+                        <p>Agrega recursos que vuelvan más atractiva y completa tu oferta.</p>
+                    </article>
+                    <article class="learn reveal">
+                        <div class="ico">↑</div>
+                        <h3>Order Bumps</h3>
+                        <p>Configura complementos para aumentar el valor de cada transacción.</p>
+                    </article>
+                    <article class="learn reveal">
+                        <div class="ico">H</div>
+                        <h3>Hotmart y afiliados</h3>
+                        <p>Publica tu producto, prepara materiales y actívalo para afiliación.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="bonos">
+            <div class="container">
+                <div class="heading center reveal"><span class="eyebrow">Bonos incluidos</span>
+                    <h2>Más acompañamiento para avanzar con <span class="gradient">mayor seguridad.</span></h2>
+                </div>
+                <div class="bonusgrid">
+                    <article class="bonus reveal"><span>Bono 1</span>
+                        <h3>Grupo privado de WhatsApp</h3>
+                        <p>Comparte avances, plantea dudas y recibe apoyo durante la implementación.</p>
+                    </article>
+                    <article class="bonus reveal"><span>Bono 2</span>
+                        <h3>Mentorías de acompañamiento</h3>
+                        <p>Recibe orientación para aplicar correctamente el método y superar bloqueos.</p>
+                    </article>
+                    <article class="bonus reveal"><span>Bono 3</span>
+                        <h3>Actualizaciones del programa</h3>
+                        <p>Accede a mejoras futuras relacionadas con el contenido y las herramientas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container resultgrid">
+                <div class="resultvisual reveal"><img alt="Resultado BookProfit IA" class="resultbox"
+                        src="assets/box.webp" /></div>
+                <div class="reveal"><span class="eyebrow">Resultado final</span>
+                    <h2>Termina con un producto digital <span class="gradient">completo y preparado para vender.</span>
+                    </h2>
+                    <p class="lead">Habrás creado un libro profesional, diseñado bonos y Order Bumps y publicado el
+                        producto en Hotmart.</p>
+                    <div class="checks">
+                        <div class="check"><i>✓</i>
+                            <div><strong>Libro digital terminado</strong><br /><span class="muted">Contenido, estructura
+                                    y diseño.</span></div>
+                        </div>
+                        <div class="check"><i>✓</i>
+                            <div><strong>Oferta de mayor valor</strong><br /><span class="muted">Bonos y Order
+                                    Bumps.</span></div>
+                        </div>
+                        <div class="check"><i>✓</i>
+                            <div><strong>Producto publicado</strong><br /><span class="muted">Configuración y
+                                    afiliados.</span></div>
+                        </div>
+                        <div class="check"><i>✓</i>
+                            <div><strong>Método reutilizable</strong><br /><span class="muted">Para nuevos
+                                    productos.</span></div>
+                        </div>
+                    </div><a class="primary btn buy"
+                        href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                        rel="noopener noreferrer" target="_blank">Quiero BookProfit IA™</a>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="mentor">
+            <div class="container mentorgrid">
+                <div class="media reveal" style="max-height:760px"><img alt="Víctor Naranjo" src="assets/mentor.webp" />
+                    <div class="label"><b class="cyan">Víctor Naranjo</b><br />Instructor de BookProfit IA™</div>
+                </div>
+                <div class="reveal"><span class="eyebrow">Sobre el instructor</span>
+                    <h2>Aprende con un especialista en <span class="gradient">productos digitales y marketing.</span>
+                    </h2>
+                    <p class="lead">Víctor Naranjo cuenta con más de seis años de experiencia en creación, lanzamiento,
+                        posicionamiento y venta de productos digitales.</p>
+                    <p>Ha trabajado con emprendedores, comunidades y programas de afiliación dentro del ecosistema de
+                        Hotmart. Su metodología es práctica, clara y orientada a la acción.</p>
+                    <div class="creds">
+                        <div class="cred"><b>6+ años</b><br /><span class="muted">de experiencia digital</span></div>
+                        <div class="cred"><b>Hotmart</b><br /><span class="muted">productos y afiliación</span></div>
+                        <div class="cred"><b>Agencia propia</b><br /><span class="muted">marketing y
+                                automatización</span></div>
+                        <div class="cred"><b>Metodología práctica</b><br /><span class="muted">paso a paso</span></div>
+                    </div><a class="primary btn buy"
+                        href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                        rel="noopener noreferrer" target="_blank">Aprender con Víctor</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer" id="oferta">
+            <div class="container offergrid">
+                <div class="ad reveal"><img alt="Oferta BookProfit IA" src="assets/anuncio.webp" /></div>
+                <div class="pricecard reveal"><span class="eyebrow">Acceso al programa completo</span>
+                    <h2 style="margin-top:18px">Convierte tus conocimientos en un <span class="gradient">producto
+                            comercializable.</span></h2>
+                    <p class="lead">Accede al curso, crea tu libro, aumenta el valor de la oferta y deja todo preparado
+                        para vender.</p><span class="old">Precio oficial: US$57</span>
+                    <div class="price"><span class="cur">US$</span><span class="amt">19</span><span class="usd">pago
+                            único</span></div>
+                    <div class="checks">
+                        <div class="check"><i>✓</i>
+                            <div><strong>Acceso inmediato</strong></div>
+                        </div>
+                        <div class="check"><i>✓</i>
+                            <div><strong>Bonos y acompañamiento</strong></div>
+                        </div>
+                        <div class="check"><i>✓</i>
+                            <div><strong>Actualizaciones del programa</strong></div>
+                        </div>
+                    </div><a class="primary btn buy"
+                        href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                        rel="noopener noreferrer" target="_blank">Inscribirme de forma segura en Hotmart →</a>
+                    <div class="secure">Agrega el enlace de pago antes de publicar.</div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="heading center reveal"><span class="eyebrow">Preguntas frecuentes</span>
+                    <h2>Resuelve tus dudas antes de <span class="gradient">comenzar.</span></h2>
+                </div>
+                <div class="faq reveal">
+                    <details>
+                        <summary>¿Necesito saber diseñar o escribir?</summary>
+                        <p>No. El programa comienza desde cero y utiliza ChatGPT y Canva para simplificar el proceso.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>¿Qué tendré al finalizar?</summary>
+                        <p>Un libro digital profesional, bonos, Order Bumps y el producto publicado en Hotmart.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo repetir el método?</summary>
+                        <p>Sí. La metodología está pensada para aplicarse a diferentes nichos y ampliar tu catálogo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué herramientas se usan?</summary>
+                        <p>ChatGPT, Canva y Hotmart.</p>
+                    </details>
+                    <details>
+                        <summary>¿Incluye acompañamiento?</summary>
+                        <p>Sí. La ficha incluye grupo privado de WhatsApp, mentorías y actualizaciones.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section class="final">
+            <div class="container">
+                <div class="finalcard reveal"><span class="eyebrow">Empieza a crear hoy</span>
+                    <h2>Tu idea puede convertirse en el primer producto de un <span class="gradient">catálogo
+                            digital.</span></h2>
+                    <p class="lead" style="margin-inline:auto">Sigue una ruta práctica y crea un activo digital que
+                        puedas mejorar, publicar y replicar.</p><a class="primary btn buy"
+                        href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+                        rel="noopener noreferrer" target="_blank">Quiero comenzar por US$19.99</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footerin">
+            <div>© 2026 BookProfit IA™. Todos los derechos reservados.</div>
+            <div>Los resultados dependen de la implementación, experiencia, esfuerzo y condiciones de mercado.</div>
+        </div>
+    </footer><a class="sticky buy" href="https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649"
+        id="sticky" rel="noopener noreferrer" target="_blank">Inscribirme ahora · US$19 →</a>
+    <script>
+        const PAYMENT_LINK = "https://pay.hotmart.com/P106684536S?checkoutMode=10&bid=1784824807649";
+        document.querySelectorAll(".buy").forEach(a => { a.href = PAYMENT_LINK; a.target = "_blank"; a.rel = "noopener noreferrer"; });
+        const menu = document.getElementById("menu"), links = document.getElementById("links"); menu?.addEventListener("click", () => links.classList.toggle("open")); links?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+        const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target) } }), { threshold: .12 }); document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+        const sticky = document.getElementById("sticky"); addEventListener("scroll", () => sticky.classList.toggle("show", scrollY > 720), { passive: true });
+        const tilt = document.getElementById("tilt"), card = document.getElementById("mentorcard"); if (tilt && card && matchMedia("(pointer:fine)").matches) { tilt.addEventListener("mousemove", e => { const r = tilt.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; card.style.transform = `rotateY(${x * 7}deg) rotateX(${-y * 6}deg) rotate(2.2deg)` }); tilt.addEventListener("mouseleave", () => card.style.transform = "rotate(2.2deg)") }
+    </script>
+</body>
+
+</html>
